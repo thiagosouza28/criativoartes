@@ -33,7 +33,7 @@ export default function Navbar({
             <div className="flex-shrink-0 flex items-center">
               {}
               <img 
-                src="./src/img/logo.png"
+                src="/img/logo.png"
                 alt="Logo Criativo Artes" 
                 className="h-8"
               />
