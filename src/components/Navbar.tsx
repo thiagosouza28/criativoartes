@@ -1,7 +1,7 @@
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { useState } from 'react';
-import { useCart } from '../context/CartContext';
-import logo from "@/img/logo.png";
+import { Menu, X, ShoppingCart } from "lucide-react";
+import { useState } from "react";
+import { useCart } from "../context/CartContext";
+import logo from "/src/img/logo.png"; // Ajustado para funcionar corretamente
 
 interface NavbarProps {
   onCartClick: () => void;
@@ -10,11 +10,11 @@ interface NavbarProps {
   onContactClick: () => void;
 }
 
-export default function Navbar({ 
-  onCartClick, 
-  onProductsClick, 
-  onServicesClick, 
-  onContactClick 
+export default function Navbar({
+  onCartClick,
+  onProductsClick,
+  onServicesClick,
+  onContactClick,
 }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { state } = useCart();
@@ -32,27 +32,22 @@ export default function Navbar({
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              {}
-              <img 
-                src={logo}
-                alt="Logo Criativo Artes" 
-                className="h-8"
-              />
+              <img src={logo} alt="Logo Criativo Artes" className="h-8" />
             </div>
             <div className="hidden md:ml-6 md:flex md:space-x-8">
-              <button 
+              <button
                 onClick={onProductsClick}
                 className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md font-medium"
               >
                 Produtos
               </button>
-              <button 
+              <button
                 onClick={onServicesClick}
                 className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md font-medium"
               >
                 Serviços
               </button>
-              <button 
+              <button
                 onClick={onContactClick}
                 className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md font-medium"
               >
@@ -83,24 +78,24 @@ export default function Navbar({
           </div>
         </div>
       </div>
-      
+
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <button 
+            <button
               onClick={() => handleMobileClick(onProductsClick)}
               className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600"
             >
               Produtos
             </button>
-            <button 
+            <button
               onClick={() => handleMobileClick(onServicesClick)}
               className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600"
             >
               Serviços
             </button>
-            <button 
+            <button
               onClick={() => handleMobileClick(onContactClick)}
               className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600"
             >
