@@ -1,6 +1,7 @@
 import { Menu, X, ShoppingCart } from 'lucide-react';
 import { useState } from 'react';
 import { useCart } from '../context/CartContext';
+import logo from "@/img/logo.png";
 
 interface NavbarProps {
   onCartClick: () => void;
@@ -33,7 +34,7 @@ export default function Navbar({
             <div className="flex-shrink-0 flex items-center">
               {}
               <img 
-                src="/img/logo.png"
+                src={logo}
                 alt="Logo Criativo Artes" 
                 className="h-8"
               />
