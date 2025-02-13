@@ -82,7 +82,7 @@ function App() {
                   </p>
                   <p className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-blue-400" />
-                    <span>Tel: (91) 98200-5417</span>
+                    <span>Tel: (91) 98200-5371</span>
                   </p>
                   <p className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-blue-400" />
